@@ -1,0 +1,36 @@
+# Proyecto Final - Creacion pagin web Tienda de Videojuegos
+
+Como proyecto web, decidimos crear una pagina web estática de una tienda de videojuegos, desarrollado como trabajo final. Este trabajo incluye:
+
+- Página HTML: Inicio, Catálogo (con opciones), Carrito(con detalle del juego e imagen), Contacto y Login.
+- Estilos CSS personalizados para diseño y atractivo.
+- Funcionalidad básica con JavaScript para filtrar productos y agregar al carrito usando `localStorage`.
+
+# Aplicativos(entornos) usados
+
+- HTML
+- CSS3
+- JS
+- Git y GitHub para repositorio remoto.
+
+# Cómo usar el proyecto
+
+1. Clonar o descargar el repositorio.
+2. Abrir el archivo `html/index.html` en un navegador web.
+3. Navegar entre las páginas para ver el catálogo, agregar productos al carrito y otros.
+
+# Estructura de carpetas
+
+- `html/` — Archivos HTML del sitio.
+- `css/` — Archivo de estilos CSS.
+- `img/` — Imágenes usadas en el proyecto.
+- `js/` — Scripts JavaScript (si agregas alguno externo).
+
+# Autores
+
+Brayan Fuentes.
+Cristian Castelbalnco.
+
+---
+
+¡Gracias  
