@@ -27,6 +27,7 @@ Como proyecto web, decidimos crear una pagina web estática de una tienda de vid
 - `css/` — Archivo de estilos CSS.
 - `img/` — Imágenes usadas en el proyecto.
 - `js/` — Scripts Java funciones
+- `Python/` — Archivo prueba automatizada
 
 # Autores
 
