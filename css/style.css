@@ -3,13 +3,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 1em;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #0d1b2a;
+  color: #f0f0f0;
   line-height: 1.5;
 }
 
 h1, h2 {
-  color: #222;
+  color: #fff; /* blanco para títulos */
   margin-bottom: 0.5em;
 }
 
@@ -54,7 +54,8 @@ nav a:focus {
 .banner {
   width: 100%;
   max-height: 400px;
-  object-fit: cover;
+  object-fit: contain; /* adaptar imágenes */
+  background-color: #000; /* fondo negro detrás */
   border-radius: 6px;
   margin-top: 1em;
 }
@@ -96,12 +97,12 @@ button:focus {
 
 /* Formularios */
 form {
-  background-color: white;
+  background-color: #000; /* fondo negro */
   padding: 1em 1.5em;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   max-width: 400px;
   margin: 1em auto;
+  color: #fff;
 }
 
 form label {
@@ -128,7 +129,7 @@ form textarea {
   min-height: 80px;
 }
 
-/* Layout flexible para catalogo/productos */
+/* Layout flexible para catálogo/productos */
 #productList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -137,10 +138,11 @@ form textarea {
 }
 
 #productList > div {
-  background-color: white;
+  background-color: #000; /* fondo negro para tarjetas */
   padding: 1em;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  color: #fff;
 }
 
 /* Para pantallas pequeñas */
@@ -149,13 +151,11 @@ form textarea {
     flex-direction: column;
     align-items: flex-start;
   }
-  
   nav {
     flex-wrap: wrap;
     gap: 0.5em;
     margin-top: 0.5em;
   }
-
   main {
     padding: 0 0.5em;
   }
