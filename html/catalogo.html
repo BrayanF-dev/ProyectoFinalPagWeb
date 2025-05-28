@@ -2,105 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Productos - Tienda de Videojuegos</title>
+  <title>Catálogo - Tienda de Videojuegos</title>
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .producto {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 10px;
-      width: 220px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      background: #fff;
-    }
-    .producto img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-    .catalogo {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-  </style>
 </head>
 <body>
-  <h1>Catálogo de Videojuegos</h1>
+  <header>
+    <h1>Catálogo de Videojuegos</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <button onclick="location.href='index.html'">Regresar</button>
   <div class="filtros">
-  <button onclick="filtrarProductos('todos')">Todos</button>
-  <button onclick="filtrarProductos('deporte')">Deporte</button>
-  <button onclick="filtrarProductos('terror')">Terror</button>
-  <button onclick="filtrarProductos('accion')">Acción/Aventura</button>
-</div>
-  <div class="catalogo" id="productList"></div>
+    <button onclick="filtrarProductos('todos')">Todos</button>
+    <button onclick="filtrarProductos('deporte')">Deporte</button>
+    <button onclick="filtrarProductos('terror')">Terror</button>
+    <button onclick="filtrarProductos('accion')">Acción/Aventura</button>
+  </div>
+  <div id="productList"></div>
 
-  <script>
- const items = [
-  { id: 1, name: "FIFA 24", price: 330000, img: "../img/FIFA24.jpg", categoria: "deporte" },
-  { id: 2, name: "Ghost of Tsushima", price: 140000, img: "../img/Ghost.jpg", categoria: "accion" },
-  { id: 3, name: "God of War Ragnarök", price: 175200, img: "../img/GodWar.jpg", categoria: "accion" },
-  { id: 4, name: "Hogwarts Legacy", price: 50000, img: "../img/Hogwarts.jpg", categoria: "accion" },
-  { id: 5, name: "Silent Hill 2 Remake", price: 210000, img: "../img/SilentHill.jpg", categoria: "terror" },
-  { id: 6, name: "The Last of Us Part I", price: 184000, img: "../img/THElou.jpg", categoria: "terror" }
-];
-
-
-  function renderizarProductos(filtro = "todos") {
-  const contenedor = document.getElementById("productList");
-  contenedor.innerHTML = "";
-
-  const filtrados = filtro === "todos" ? items : items.filter(p => p.categoria === filtro);
-
-  filtrados.forEach(p => {
-    const div = document.createElement('div');
-    div.className = 'producto';
-    div.innerHTML = `
-      <img src="${p.img}" alt="${p.name}">
-      <h3>${p.name}</h3>
-      <p>Precio: $${p.price.toLocaleString('es-ES')}</p>
-      <button class="addToCart" 
-        data-id="${p.id}" 
-        data-name="${p.name}" 
-        data-price="${p.price}" 
-        data-img="${p.img}">
-        Agregar al carrito
-      </button>
-    `;
-    contenedor.appendChild(div);
-  });
-
-  // Reasignar eventos para botones luego del renderizado
-  document.querySelectorAll('.addToCart').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const producto = {
-        id: btn.dataset.id,
-        name: btn.dataset.name,
-        price: parseFloat(btn.dataset.price),
-        img: btn.dataset.img
-      };
-      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      carrito.push(producto);
-      localStorage.setItem('carrito', JSON.stringify(carrito));
-      alert(`${producto.name} agregado al carrito`);
-    });
-  });
-}
-
-function filtrarProductos(categoria) {
-  renderizarProductos(categoria);
-}
-
-window.onload = function () {
-  renderizarProductos();
-};
-</script>
-
-
-  <a href="carrito.html">Ver carrito</a>
+  <script src="../js/catalogo.js"></script>
 </body>
 </html>
-
