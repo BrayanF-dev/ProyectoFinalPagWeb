@@ -24,6 +24,7 @@ try:
     driver.get(f"{base_url}/index.html")
 
     # 2. Ir a login y loguear
+    time.slepp(2)
     driver.find_element(By.LINK_TEXT, 'Login').click()
     time.sleep(1)
     driver.find_element(By.ID, 'username').send_keys('cris')
