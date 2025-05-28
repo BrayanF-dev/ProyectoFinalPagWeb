@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inicio - Tienda de Videojuegos</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
@@ -12,6 +12,7 @@
     <nav>
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
       <a href="contacto.html">Contacto</a>
       <a href="login.html">Login</a>
     </nav>
@@ -21,7 +22,10 @@
     <section>
       <h2>Bienvenido a la mejor tienda de videojuegos</h2>
       <p>Explora nuestros últimos lanzamientos, juegos clásicos y promociones exclusivas.</p>
-      <img src="../img/banner.jpg" alt="Banner de videojuegos" style="width:100%; max-height:400px; object-fit:cover;">
+      <img class="banner" src="../img/banner.jpg" alt="Banner de videojuegos">
+      <div style="text-align:center; margin-top:1em;">
+        <button onclick="location.href='contacto.html'">Contáctanos</button>
+      </div>
     </section>
   </main>
 
@@ -30,4 +34,3 @@
   </footer>
 </body>
 </html>
-
