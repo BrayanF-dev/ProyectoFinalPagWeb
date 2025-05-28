@@ -4,99 +4,25 @@
   <meta charset="UTF-8">
   <title>Carrito de Compras</title>
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* Estilos para que los productos del carrito se vean ordenados */
-    .producto-carrito {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    }
-    .producto-carrito img {
-      width: 50px;
-      height: auto;
-      border-radius: 5px;
-      margin-right: 15px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
-    .producto-info {
-      flex-grow: 1;
-    }
-    .producto-info span {
-      display: block;
-      font-weight: bold;
-    }
-    .producto-info p {
-      margin: 5px 0 0 0;
-      font-weight: normal;
-    }
-    button {
-      margin-left: 15px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
-  <h1>Carrito de Compras</h1>
+  <header>
+    <h1>Carrito de Compras</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <button onclick="location.href='index.html'">Regresar</button>
   <div id="cartItems"></div>
   <p id="total"></p>
   <button id="vaciar">Vaciar carrito</button>
-  <a href="catalogo.html">Volver al catálogo</a>
   <button id="finalizar">Finalizar compra</button>
 
-  <script>
-    function mostrarCarrito() {
-      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      const contenedor = document.getElementById('cartItems');
-      contenedor.innerHTML = '';
-
-      let total = 0;
-
-      carrito.forEach((producto, index) => {
-        const div = document.createElement('div');
-        div.className = 'producto-carrito';
-        div.innerHTML = `
-          <img src="${producto.img}" alt="${producto.name}">
-          <div class="producto-info">
-            <span>${producto.name}</span>
-            <p>Precio: $${producto.price.toLocaleString('es-ES')}</p>
-          </div>
-          <button onclick="eliminarProducto(${index})">Eliminar</button>
-        `;
-        contenedor.appendChild(div);
-        total += producto.price;
-      });
-
-      document.getElementById('total').textContent = `Total: $${total.toLocaleString('es-ES')}`;
-    }
-
-    function eliminarProducto(index) {
-      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      carrito.splice(index, 1);
-      localStorage.setItem('carrito', JSON.stringify(carrito));
-      mostrarCarrito();
-    }
-
-    document.getElementById('vaciar').addEventListener('click', () => {
-      localStorage.removeItem('carrito');
-      mostrarCarrito();
-    });
-
-    document.getElementById('finalizar').addEventListener('click', () => {
-      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      if (carrito.length === 0) {
-        alert('Tu carrito está vacío.');
-      } else {
-        alert('¡Gracias por tu compra! Se ha generado tu pedido.');
-        localStorage.removeItem('carrito');
-        mostrarCarrito();
-      }
-    });
-
-    mostrarCarrito();
-  </script>
+  <script src="../js/carrito.js"></script>
 </body>
 </html>
-
 
