@@ -11,6 +11,7 @@ Como proyecto web, decidimos crear una pagina web estática de una tienda de vid
 - HTML
 - CSS3
 - JS
+- Python
 - Git y GitHub para repositorio remoto.
 
 # Cómo usar el proyecto
@@ -18,13 +19,14 @@ Como proyecto web, decidimos crear una pagina web estática de una tienda de vid
 1. Clonar o descargar el repositorio.
 2. Abrir el archivo `html/index.html` en un navegador web.
 3. Navegar entre las páginas para ver el catálogo, agregar productos al carrito y otros.
+4. pruebas automatizadas python modificar ruta del archivo
 
 # Estructura de carpetas
 
 - `html/` — Archivos HTML del sitio.
 - `css/` — Archivo de estilos CSS.
 - `img/` — Imágenes usadas en el proyecto.
-- `js/` — Scripts JavaScript (si agregas alguno externo).
+- `js/` — Scripts Java funciones
 
 # Autores
 
