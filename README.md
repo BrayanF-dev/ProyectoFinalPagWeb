@@ -64,11 +64,11 @@ El archivo `SeleniumTests.py` realiza las siguientes pruebas automáticamente:
 - Google Chrome instalado
 - Paquetes de Python:
 - 
-```bash
+
 pip install selenium webdriver-manager
 
 
- **Autores**
+## **Autores**
 
 Brayan Fuentes.
 Cristian Castelbalnco.
