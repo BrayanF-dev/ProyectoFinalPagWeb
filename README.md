@@ -19,7 +19,7 @@ Como proyecto web, decidimos crear una pagina web estática de una tienda de vid
 1. Clonar o descargar el repositorio.
 2. Abrir el archivo `html/index.html` en un navegador web.
 3. Navegar entre las páginas para ver el catálogo, agregar productos al carrito y otros.
-4. pruebas automatizadas python modificar ruta del archivo
+4. pruebas automatizadas python modificar el scrip en ruta de donde se encuentra el index
 
 # Estructura de carpetas
 
